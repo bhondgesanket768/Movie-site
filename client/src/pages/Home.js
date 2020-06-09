@@ -48,7 +48,7 @@ function Home() {
                         </div>
                         <div align="center" style={{ fontSize: 20 }}>
                             <p> Watch latest movies and Tv show online here, Thousand of Movies and Tv show to explore. </p>
-                            <p>Get information regarding movies and shows</p>
+                            <p>Get information regarding movies and shows Free</p>
                         </div>
 
                         <div align="center" style={{ paddingTop: "20px" }}>
