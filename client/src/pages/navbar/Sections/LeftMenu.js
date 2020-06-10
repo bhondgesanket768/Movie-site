@@ -18,6 +18,10 @@ function LeftMenu(props) {
     }
   }
 
+  const onClick = (e) => {
+    history.push("/movies");
+  }
+
   const homeClick = (e) => {
     history.push("/");
   }
@@ -31,8 +35,8 @@ function LeftMenu(props) {
       <Menu.Item key="home" onClick={homeClick}>
         <a>Home</a>
       </Menu.Item>
-      <Menu.Item key="movies" >
-        <a href="/movies">Movies</a>
+      <Menu.Item key="movies" onClick={onClick}>
+        <a>Movies</a>
       </Menu.Item>
       <Menu.Item key="tv" onClick={showClick} >
         <a>Tv Shows</a>
