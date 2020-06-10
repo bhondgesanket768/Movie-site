@@ -1,3 +1,3 @@
 const createBrowserHistory = require('history').createBrowserHistory;
-const history = createBrowserHistory({ forceRefresh: true })
+const history = createBrowserHistory()
 export default history
