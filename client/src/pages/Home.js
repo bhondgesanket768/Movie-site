@@ -116,6 +116,13 @@ function Home() {
                     <CarouselComponent data={nowPlaying} nowPlaying />
                 </div>
 
+                <div style={{ paddingTop: 32 }}>
+                    <a href="https://hostgator-india.sjv.io/c/2353394/424204/7275" id="424204">
+                        <img src={"//a.impactradius-go.com/display-ad/7275-424204"} border="0" alt="" width="468" height="60" />
+                    </a>
+                    <img src={"//hostgator-india.sjv.io/i/2353394/424204/7275"} style={{ height: "0", width: "0", style: "position:absolute;visibility:hidden;", border: "0" }} />
+                </div>
+
             </div>
             <Footer />
         </div>
