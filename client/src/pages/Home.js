@@ -29,15 +29,6 @@ function Home() {
         fetchNowPlaying(nowPlaying);
     }, [])
 
-    const handleMovie = () => {
-        history.push("/movies")
-    }
-
-    const handleTv = () => {
-        history.push("/tvShows")
-    }
-
-
     return (
         <div style={{ backgroundColor: "#F7DC6F " }}>
             <Card style={{ height: "60vh", background: `url(${loginimage})`, backgroundSize: "100%, cover", backgroundAttachment: "fixed" }}>
@@ -87,24 +78,26 @@ function Home() {
             <div align="center" style={{ width: "85%", margin: "1rem auto" }}>
                 <Row>
                     <Col span={12}>
-                        <Card
-                            hoverable
-                            style={{ width: "90%", height: "150px", background: `url(${gradient})`, backgroundSize: "100%, cover" }}
-                            cover
-                            onClick={handleMovie}
-                        >
-                            <Meta title="Get Movies List" description={<b>Watch Latest Movies Online</b>} />
-                        </Card>
+                        <a href="/movies">
+                            <Card
+                                hoverable
+                                style={{ width: "90%", height: "150px", background: `url(${gradient})`, backgroundSize: "100%, cover" }}
+                                cover
+                            >
+                                <Meta title="Get Movies List" description={<b>Watch Latest Movies Online</b>} />
+                            </Card>
+                        </a>
                     </Col>
                     <Col span={12}>
-                        <Card
-                            hoverable
-                            style={{ width: "90%", height: "150px", background: `url(${gradient})`, backgroundSize: "100%, cover" }}
-                            cover
-                            onClick={handleTv}
-                        >
-                            <Meta title="Get Tv Shows List" description={<b>Watch Tv shows online</b>} />
-                        </Card>
+                        <a href="/tvShows">
+                            <Card
+                                hoverable
+                                style={{ width: "90%", height: "150px", background: `url(${gradient})`, backgroundSize: "100%, cover" }}
+                                cover
+                            >
+                                <Meta title="Get Tv Shows List" description={<b>Watch Tv shows online</b>} />
+                            </Card>
+                        </a>
                     </Col>
                 </Row>
 
