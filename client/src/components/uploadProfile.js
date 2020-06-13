@@ -38,7 +38,7 @@ function UploadProfile(props) {
     return (
         <div align="center">
             {props.upload ? (
-                <img style={{ width: '200px', height: '200px', borderRadius: "50%" }} src={user.userData && (user.userData.image.substring(0, 4) === "http" ? user.userData.image : `http://localhost:5000/${user.userData.image}`)} alt="img" />
+                <img style={{ width: '200px', height: '200px', borderRadius: "50%" }} src={user.userData && ( user.userData.image.substring(0, 4) === "http" ? user.userData.image : `http://localhost:5000/${user.userData.image}`)} alt="img" />
             ) : (
                     Images.length === 0 ? (
                         <Dropzone
@@ -63,7 +63,7 @@ function UploadProfile(props) {
                             <div style={{ display: 'flex', width: '200px', height: '200px' }}>
                                 {Images.map((image, index) => (
                                     <div onClick>
-                                        <img style={{ width: '200px', height: '200px', borderRadius: "50%" }} src={`https://movietpoint/${image}`} alt={`productImg-${index}`} />
+                                        <img style={{ width: '200px', height: '200px', borderRadius: "50%" }} src={`https://www.movietpoint.com/${image}`} alt={`productImg-${index}`} />
                                     </div>
                                 ))}
                             </div>
