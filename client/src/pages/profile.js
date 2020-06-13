@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import UploadProfile from "../components/uploadProfile";
-import { Button, Descriptions, Card } from 'antd';
+import { Button, Descriptions, Card, Alert } from 'antd';
 import axios from "axios";
 import { notify } from "../utils";
 import { updateProfile } from "../actions/userActions";
@@ -46,7 +46,17 @@ function Profile() {
         <div align="center" style={{ maxWidth: '700px', margin: '2rem auto' }}>
             <Card>
                 <UploadProfile refreshFunction={update} edit={edit} upload={editimage} />
-                {upload && <Button onClick={handleClick}>Upload</Button>}
+                {upload && image.length === 0 &&
+                    <div align="left">
+                        <Alert
+                            message="Note"
+                            description="Click on the above dropzone to upload image"
+                            type="info"
+                            showIcon
+                        />
+                    </div>
+                }
+                {upload && image.length > 0 && <Button onClick={handleClick}>Upload</Button>}
                 <hr />
 
                 <div>

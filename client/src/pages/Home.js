@@ -30,14 +30,6 @@ function Home() {
         fetchNowPlaying(nowPlaying);
     }, [])
 
-    const movieClick = () => {
-        history.push("/movies")
-    }
-
-    const showClick = () => {
-        history.push("/tvShows")
-    }
-
     return (
         <div style={{ backgroundColor: "#F7DC6F " }}>
             <Card style={{ height: "60vh", background: `url(${loginimage})`, backgroundSize: "100%, cover", backgroundAttachment: "fixed" }}>
@@ -99,14 +91,16 @@ function Home() {
                         </Link>
                     </Col>
                     <Col span={12}>
-                        <Card
-                            hoverable
-                            style={{ width: "90%", height: "150px", background: `url(${gradient})`, backgroundSize: "100%, cover" }}
-                            cover
-                            onClick={showClick}
-                        >
-                            <Meta title="Get Tv Shows List" description={<b>Watch Tv shows online</b>} />
-                        </Card>
+                        <Link to={`/tvShows`}>
+                            <Card
+                                hoverable
+                                style={{ width: "90%", height: "150px", background: `url(${gradient})`, backgroundSize: "100%, cover" }}
+                                cover
+                                onClick
+                            >
+                                <Meta title="Get Tv Shows List" description={<b>Watch Tv shows online</b>} />
+                            </Card>
+                        </Link>
                     </Col>
                 </Row>
 
