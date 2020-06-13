@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row, Button, Typography } from 'antd';
+import { Link } from 'react-router-dom';
 import loginimage from "../assets/home.jpg"
 import gradient from "../assets/gradient.jpg"
 import { API_KEY, API_URL } from "../components/config"
@@ -86,14 +87,16 @@ function Home() {
             <div align="center" style={{ width: "85%", margin: "1rem auto" }}>
                 <Row>
                     <Col span={12}>
-                        <Card
-                            hoverable
-                            style={{ width: "90%", height: "150px", background: `url(${gradient})`, backgroundSize: "100%, cover" }}
-                            cover
-                            onClick={movieClick}
-                        >
-                            <Meta title="Get Movies List" description={<b>Watch Latest Movies Online</b>} />
-                        </Card>
+                        <Link to={`/movies`}>
+                            <Card
+                                hoverable
+                                style={{ width: "90%", height: "150px", background: `url(${gradient})`, backgroundSize: "100%, cover" }}
+                                cover
+                                onClick
+                            >
+                                <Meta title="Get Movies List" description={<b>Watch Latest Movies Online</b>} />
+                            </Card>
+                        </Link>
                     </Col>
                     <Col span={12}>
                         <Card

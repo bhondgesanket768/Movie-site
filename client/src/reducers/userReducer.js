@@ -3,6 +3,7 @@ import {
     REGISTER_USER,
     AUTH_USER,
     LOGOUT_USER,
+    UPDATE_PROFILE,
 } from '../actions/types';
 
 const initialState = {
@@ -19,6 +20,8 @@ export default function (state = initialState, action) {
             return { ...state, userData: action.payload }
         case LOGOUT_USER:
             return { ...state }
+        case UPDATE_PROFILE:
+            return { ...state, userData: Object.assign({}, state.userData, action.payload) }
         default:
             return state;
     }

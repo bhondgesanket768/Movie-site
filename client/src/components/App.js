@@ -12,6 +12,7 @@ import Auth from "./auth";
 import FavouritePage from "../pages/movie/favouritePage";
 import TvShows from "../pages/tv/tvShows";
 import TvDetailed from "../pages/tv/tvDetail";
+import Profile from "../pages/profile";
 
 import Home from "../pages/Home"
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/favourite" exact component={Auth(FavouritePage, null)} />
             <Route path="/tvShows" exact component={Auth(TvShows, null)} />
             <Route path="/tvShows/:showId" exact component={Auth(TvDetailed, null)} />
+            <Route path="/profile" exact component={Auth(Profile, true)} />
           </Switch>
         </Router>
         {loading && <Spin spinning={true} size="large" />}

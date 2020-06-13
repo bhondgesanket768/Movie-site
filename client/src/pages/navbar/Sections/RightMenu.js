@@ -26,6 +26,10 @@ function RightMenu(props) {
     history.push("/register");
   }
 
+  const profileClick = () => {
+    history.push("/profile");
+  }
+
   if (user.userData && !user.userData.isAuth) {
     return (
       <Menu mode={props.mode}>
@@ -40,8 +44,8 @@ function RightMenu(props) {
   } else {
     return (
       <Menu mode={props.mode}>
-        <Menu.Item key="Profile" style={{ paddingBottom: 10 }}>
-          <Avatar src={user.userData && user.userData.image} alt="image"></Avatar>
+        <Menu.Item key="Profile" style={{ paddingBottom: 10 }} onClick={profileClick}>
+          <Avatar src={user.userData && (user.userData.image.substring(0, 4) === "http" ? user.userData.image : `http://localhost:5000/${user.userData.image}`)} alt="image"></Avatar>
         </Menu.Item>
         <Menu.Item key="logout">
           <a onClick={logoutHandler}>Logout</a>

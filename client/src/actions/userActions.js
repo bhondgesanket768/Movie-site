@@ -5,6 +5,7 @@ import {
     REGISTER_USER,
     AUTH_USER,
     LOGOUT_USER,
+    UPDATE_PROFILE
 } from "./types";
 
 export function registerUser(dataToSubmit) {
@@ -46,5 +47,12 @@ export function logoutUser() {
     return {
         type: LOGOUT_USER,
         payload: request
+    }
+}
+
+export function updateProfile(data) {
+    return {
+        type: UPDATE_PROFILE,
+        payload: data
     }
 }
