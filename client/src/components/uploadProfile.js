@@ -4,6 +4,7 @@ import { PlusOutlined } from '@ant-design/icons';
 import axios from "axios"
 import { Button } from 'antd';
 import { useSelector } from "react-redux";
+import { notify } from "../utils";
 
 function UploadProfile(props) {
 
@@ -11,6 +12,13 @@ function UploadProfile(props) {
     const user = useSelector(state => state.user)
 
     const onDrop = (files) => {
+
+        const type = files[0].name.split(".")[1];
+
+        if (type !== "jpg" && type !== "png") {
+            notify("error", "Error", "Only jpg or png files are allowed");
+            return;
+        }
 
         let formData = new FormData();
         const config = {
@@ -38,7 +46,7 @@ function UploadProfile(props) {
     return (
         <div align="center">
             {props.upload ? (
-                <img style={{ width: '200px', height: '200px', borderRadius: "50%" }} src={user.userData && ( user.userData.image.substring(0, 4) === "http" ? user.userData.image : `https://www.movietpoint.com/${user.userData.image}`)} alt="img" />
+                <img style={{ width: '200px', height: '200px', borderRadius: "50%" }} src={user.userData && user.userData.image} alt="img" />
             ) : (
                     Images.length === 0 ? (
                         <Dropzone
@@ -63,7 +71,7 @@ function UploadProfile(props) {
                             <div style={{ display: 'flex', width: '200px', height: '200px' }}>
                                 {Images.map((image, index) => (
                                     <div onClick>
-                                        <img style={{ width: '200px', height: '200px', borderRadius: "50%" }} src={`https://www.movietpoint.com/${image}`} alt={`productImg-${index}`} />
+                                        <img style={{ width: '200px', height: '200px', borderRadius: "50%" }} src={image.url} alt={`productImg-${index}`} />
                                     </div>
                                 ))}
                             </div>

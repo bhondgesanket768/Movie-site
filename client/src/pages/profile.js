@@ -27,15 +27,17 @@ function Profile() {
     const handleClick = () => {
         const variable = {
             userId: localStorage.getItem("userId"),
-            image: image[0]
+            image: image[0].url
         }
+
         axios.post("/api/users/changeProfile", variable)
             .then(response => {
                 if (response.data.success) {
-                    dispatch(updateProfile({ image: image[0] }))
+                    dispatch(updateProfile({ image: image[0].url }))
                     notify("success", "Success", "Profile pic updated successfully")
                     setUpload(false);
                     setEdit(true);
+                    setimage([]);
                 } else {
                     alert("failed to upload image");
                 }

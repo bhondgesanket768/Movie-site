@@ -5,6 +5,8 @@ const auth = require("../middleware/auth");
 const bcrypt = require("bcrypt");
 const saltRound = 10;
 const multer = require("multer");
+const cloudinary = require("../startup/cloudnary")
+const fs = require("fs")
 
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -86,11 +88,22 @@ router.get("/logout", auth, (req, res) => {
 })
 
 router.post("/uploadImage", auth, (req, res) => {
-    upload(req, res, err => {
+
+    upload(req, res, async err => {
+
         if (err) {
             return res.json({ success: false, err })
         }
-        return res.json({ success: true, image: res.req.file.path, fileName: res.req.file.filename })
+        const uploader = async (path) => await cloudinary.uploads(path, "image")
+
+        const files = req.file
+
+        const { path } = files
+
+        const newPath = await uploader(path)
+
+        fs.unlinkSync(path)
+        return res.json({ success: true, image: newPath, fileName: res.req.file.filename })
     })
 
 })
