@@ -135,12 +135,14 @@ function FavouritePage() {
 
     return (
         <div style={{ width: "85%", margin: "3rem auto" }}>
-            <h3>Movies Favoutite List</h3>
+            <h3>Movies Favourite List</h3>
             <hr />
             <Table columns={columns} dataSource={data} bordered style={{ paddingTop: 32 }} />
-            <h3>Show Favoutite List</h3>
-            <hr />
-            <Table columns={showColumns} dataSource={showData} bordered style={{ paddingTop: 32 }} />
+            <div style={{ paddingTop: 30 }}>
+                <h3>Show Favourite List</h3>
+                <hr />
+                <Table columns={showColumns} dataSource={showData} bordered style={{ paddingTop: 32 }} />
+            </div>
         </div>
     )
 }
