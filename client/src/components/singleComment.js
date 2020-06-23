@@ -49,7 +49,7 @@ function SingleComment(props) {
             <Comment
                 actions={action}
                 author={props.comment.writer.name}
-                avatar={<Avatar src={`https://www.movietpoint.com/${props.comment.writer.image}`} alt="image" />}
+                avatar={<Avatar src={props.comment.writer.image} alt="image" />}
                 content={
                     <p>
                         {props.comment.content}
