@@ -9,6 +9,7 @@ import Comment from "../../components/comments"
 import Footer from "../../components/footer"
 import Rate from "../../components/rate"
 import axios from "axios";
+import showTime from "../../assets/showtime.jpg"
 
 function MovieDetail(props) {
 
@@ -131,20 +132,23 @@ function MovieDetail(props) {
                                     </div>
                                 </Col>
                                 <Col lg={12} md={24} sm={24}>
-                                    <p>Get 30 days Free Trial</p>
+                                    <p style={{ paddingTop: 10 }}>Get 30 days Free Trial</p>
                                 </Col>
                             </Card>
                         </Col>
                         <Col lg={8} md={24} sm={24} style={{ paddingRight: 16 }}>
-                            <h2>HBO</h2>
+                            <h2>ShowTime</h2>
                             <Card >
-                                <p>Get 7 Days free Trail</p>
+                                <a target="_blank" href="https://www.amazon.com/gp/video/offers/signup/ref=DVM_PTM_AMG_US_AC_C_ACQ_SHOMLPlink2?benefitID=showtimeSub">
+                                    <img src={showTime} style={{ width: "50%", borderRadius: "50%" }} />
+                                </a>
+                                <p style={{ paddingTop: 10 }}>Get 7 Days free Trail</p>
                             </Card>
                         </Col>
                         <Col lg={8} md={24} sm={24}>
                             <h2>Disney+</h2>
                             <Card >
-                                <p>Card content</p>
+                                <p>Coming Soon..</p>
                             </Card>
                         </Col>
                     </Row>
