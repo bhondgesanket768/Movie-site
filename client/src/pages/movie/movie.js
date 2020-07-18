@@ -10,6 +10,7 @@ import Footer from "../../components/footer"
 import Rate from "../../components/rate"
 import axios from "axios";
 import showTime from "../../assets/showtime.jpg"
+import disney from "../../assets/Disney.png";
 
 function MovieDetail(props) {
 
@@ -121,11 +122,11 @@ function MovieDetail(props) {
                 <div style={{ paddingTop: "32px" }}>
                     <Row>
                         <Col lg={8} md={24} sm={24} style={{ paddingRight: 16 }}>
-                            <h2>amazon prime</h2>
+                            <h2>Amazon Prime</h2>
                             <Card >
                                 <Col lg={12} md={24} sm={24}>
                                     <div>
-                                        <a target="_blank" href="https://www.amazon.in/gp/product/B07VCB6CRK/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=B07VCB6CRK&linkCode=as2&tag=movietpoint-21&linkId=0965907c3d9f41cc97ec7ca58ae45ae5">
+                                        <a target="_blank" href="https://www.primevideo.com/">
                                             <img border="0" src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IN&ASIN=B07VCB6CRK&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=movietpoint-21" style={{ width: "100px" }} />
                                         </a>
                                         <img src="//ir-in.amazon-adsystem.com/e/ir?t=movietpoint-21&l=am2&o=31&a=B07VCB6CRK" width="1" height="1" border="0" alt="" style={{ border: "none !important; margin:0px !important;" }} />
@@ -147,8 +148,11 @@ function MovieDetail(props) {
                         </Col>
                         <Col lg={8} md={24} sm={24}>
                             <h2>Disney+</h2>
-                            <Card >
-                                <p>Coming Soon..</p>
+                            <Card>
+                                <a target="_blank" href="https://www.hotstar.com/in">
+                                    <img src={disney} style={{ width: "50%", borderRadius: "50%", height:150 }} />
+                                </a>
+                                <p style={{ paddingTop: 10 }}>Watch online.</p>
                             </Card>
                         </Col>
                     </Row>

@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react"
 import { API_KEY, API_URL, IMAGE_URL, YOU_TUBE } from "../../components/config";
 import MainImage from "../../components/mainImage"
-import { Descriptions, Avatar, Button, Row } from 'antd';
+import { Descriptions, Avatar, Button, Row, Col, Card } from 'antd';
 import GridCard from "../../components/GridCard";
 import ShowFavourite from "../../components/showFavourite"
 import Rate from "../../components/rate";
 import Comment from "../../components/comments"
 import Footer from "../../components/footer"
 import axios from "axios"
+import showTime from "../../assets/showtime.jpg"
+import disney from "../../assets/Disney.png";
 
 function TvDetailed(props) {
 
@@ -123,6 +125,45 @@ function TvDetailed(props) {
                             ))}
                         </Row>
                     </div>
+                </div>
+
+                <div style={{ paddingTop: "32px" }}>
+                    <Row>
+                        <Col lg={8} md={24} sm={24} style={{ paddingRight: 16 }}>
+                            <h2>Amazon Prime</h2>
+                            <Card >
+                                <Col lg={12} md={24} sm={24}>
+                                    <div>
+                                        <a target="_blank" href="https://www.primevideo.com/">
+                                            <img border="0" src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IN&ASIN=B07VCB6CRK&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=movietpoint-21" style={{ width: "100px" }} />
+                                        </a>
+                                        <img src="//ir-in.amazon-adsystem.com/e/ir?t=movietpoint-21&l=am2&o=31&a=B07VCB6CRK" width="1" height="1" border="0" alt="" style={{ border: "none !important; margin:0px !important;" }} />
+                                    </div>
+                                </Col>
+                                <Col lg={12} md={24} sm={24}>
+                                    <p style={{ paddingTop: 10 }}>Get 30 days Free Trial</p>
+                                </Col>
+                            </Card>
+                        </Col>
+                        <Col lg={8} md={24} sm={24} style={{ paddingRight: 16 }}>
+                            <h2>ShowTime</h2>
+                            <Card >
+                                <a target="_blank" href="https://www.amazon.com/gp/video/offers/signup/ref=DVM_PTM_AMG_US_AC_C_ACQ_SHOMLPlink2?benefitID=showtimeSub">
+                                    <img src={showTime} style={{ width: "50%", borderRadius: "50%" }} />
+                                </a>
+                                <p style={{ paddingTop: 10 }}>Get 7 Days free Trail</p>
+                            </Card>
+                        </Col>
+                        <Col lg={8} md={24} sm={24}>
+                            <h2>Disney+</h2>
+                            <Card>
+                                <a target="_blank" href="https://www.hotstar.com/in">
+                                    <img src={disney} style={{ width: "50%", borderRadius: "50%", height: 150 }} />
+                                </a>
+                                <p style={{ paddingTop: 10 }}>Watch online.</p>
+                            </Card>
+                        </Col>
+                    </Row>
                 </div>
 
                 <div align="left" style={{ paddingBottom: 30, paddingTop: 30 }}>
