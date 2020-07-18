@@ -45,6 +45,7 @@ function Favourite(props) {
                     if (response.data.success) {
                         setFavouriteNO(favouriteNo - 1);
                         setFavourite(!favourite)
+                        notify("success", "Success", "Movie removed from your favourite list")
                     } else {
                         notify("error", "Error", "something went wrong")
                     }
@@ -56,6 +57,7 @@ function Favourite(props) {
                     if (response.data.success) {
                         setFavouriteNO(favouriteNo + 1);
                         setFavourite(!favourite)
+                        notify("success", "Success", "Movie added to your favourite list")
                     } else {
                         notify("error", "Error", "something went wrong")
                     }

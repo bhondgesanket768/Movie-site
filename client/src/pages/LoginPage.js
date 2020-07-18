@@ -38,7 +38,7 @@ function LoginPage(props) {
   }
 
   return (
-    <div style={{ background: `url(${loginimage})`, backgroundSize: "100%, cover", }}>
+    <div>
       <Formik
         initialValues={{
           email: initialEmail,
