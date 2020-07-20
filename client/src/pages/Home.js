@@ -31,7 +31,7 @@ function Home() {
     }, [])
 
     return (
-        <div style={{ backgroundColor: "#F7DC6F " }}>
+        <div style={{ backgroundColor: "#F7DC6F ", width: "100%", margin: 0 }}>
             <Card style={{ height: "60vh", background: `url(${loginimage})`, backgroundSize: "100%, cover", backgroundAttachment: "fixed" }}>
                 <Row >
                     <Card style={{ marginTop: "30vh", marginLeft: "10%", width: "80%", minHeight: "40vh", backgroundColor: "white" }}>
@@ -61,18 +61,13 @@ function Home() {
             <div style={{ width: "100%", margin: "1rem auto", paddingTop: "250px" }}>
                 <div align="center">
                     <div style={{ width: "80%", minHeight: "40vh" }}>
-                        <Row >
-                            <Col span={12}>
-                                <img src={family} style={{ width: "80%", borderRadius: "50%" }} />
-                            </Col>
-                            <Col span={12}>
-                                <h2 style={{ fontSize: "30px", paddingBottom: "20px" }}>Our Features</h2>
-                                <p style={{ fontSize: "20px", marginBottom: "50px" }}><InfoCircleOutlined size="large" style={{ color: "green", paddingRight: 8 }} />Get All the necessary information about Movies and Tv Shows</p>
-                                <p style={{ fontSize: "20px", marginBottom: "50px" }}><PlayCircleOutlined size="large" style={{ color: "green", paddingRight: 8 }} />Watch Latest Movies and Tv shows Online</p>
-                                <p style={{ fontSize: "20px", marginBottom: "50px" }}><AppstoreAddOutlined size="large" style={{ color: "green", paddingRight: 8 }} />Add movies and Tv shows to your favourite List</p>
-                                <p style={{ fontSize: "20px", marginBottom: "50px" }}><CommentOutlined size="large" style={{ color: "green", paddingRight: 8 }} />Rate and Comments feature</p>
-                            </Col>
-                        </Row>
+                        <div align="center">
+                            <h2 style={{ fontSize: "30px", paddingBottom: "20px" }}>Our Features</h2>
+                            <p style={{ fontSize: "20px", marginBottom: "50px" }}><InfoCircleOutlined size="large" style={{ color: "green", paddingRight: 8 }} />Get All the necessary information about Movies and Tv Shows</p>
+                            <p style={{ fontSize: "20px", marginBottom: "50px" }}><PlayCircleOutlined size="large" style={{ color: "green", paddingRight: 8 }} />Watch Latest Movies and Tv shows Online</p>
+                            <p style={{ fontSize: "20px", marginBottom: "50px" }}><AppstoreAddOutlined size="large" style={{ color: "green", paddingRight: 8 }} />Add movies and Tv shows to your favourite List</p>
+                            <p style={{ fontSize: "20px", marginBottom: "50px" }}><CommentOutlined size="large" style={{ color: "green", paddingRight: 8 }} />Rate and Comments feature</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -111,14 +106,6 @@ function Home() {
                 <div style={{ paddingTop: 32 }}>
                     <CarouselComponent data={nowPlaying} nowPlaying />
                 </div>
-
-                <div style={{ paddingTop: 32 }}>
-                    <a href="https://hostgator-india.sjv.io/c/2353394/424204/7275" id="424204">
-                        <img src={"//a.impactradius-go.com/display-ad/7275-424204"} border="0" alt="" width="468" height="60" />
-                    </a>
-                    <img src={"//hostgator-india.sjv.io/i/2353394/424204/7275"} style={{ height: "0", width: "0", style: "position:absolute;visibility:hidden;", border: "0" }} />
-                </div>
-
             </div>
             <Footer />
         </div>
