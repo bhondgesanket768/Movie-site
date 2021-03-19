@@ -118,7 +118,7 @@ function MovieDetail(props) {
                         </Row>
                     </div>
                 }
-
+                {/*
                 <div style={{ paddingTop: "32px" }}>
                     <Row>
                         <Col lg={8} md={24} sm={24} style={{ paddingRight: 16 }}>
@@ -156,7 +156,7 @@ function MovieDetail(props) {
                             </Card>
                         </Col>
                     </Row>
-                </div>
+                </div>*/}
 
                 <div align="left" style={{ paddingBottom: 30, paddingTop: 30 }}>
                     <h3>Rate this Movie</h3>

@@ -126,7 +126,7 @@ function TvDetailed(props) {
                         </Row>
                     </div>
                 </div>
-
+                {/*
                 <div style={{ paddingTop: "32px" }}>
                     <Row>
                         <Col lg={8} md={24} sm={24} style={{ paddingRight: 16 }}>
@@ -165,7 +165,7 @@ function TvDetailed(props) {
                         </Col>
                     </Row>
                 </div>
-
+                */}
                 <div align="left" style={{ paddingBottom: 30, paddingTop: 30 }}>
                     <h3>Rate this Show</h3>
                     <Rate showId={showId} userId={localStorage.getItem("userId")} show />
