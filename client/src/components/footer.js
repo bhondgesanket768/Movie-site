@@ -18,7 +18,7 @@ function Footer() {
                     </div>
                     <div style={{ width: "20%", padding: 20, borderLeft: "2px solid black" }}>
                         <div align="center">
-                            <h3> &copy; Copyright 2020. All Rights Reserved</h3>
+                            <h3> &copy; Copyright 2021. All Rights Reserved</h3>
                         </div>
                     </div>
                 </div>
