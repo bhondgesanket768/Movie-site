@@ -13,7 +13,8 @@ function GridCard(props) {
                 <div style={{ position: "relative" }}>
                     <Card
                         hoverable
-                        style={{ width: "100%" }}
+                        bordered
+                        style={{ width: "100%"}}
                         cover={<img alt="img" src={props.image} />}
                     >
                         <Meta title={props.name} description={`Character : ${props.character}`} />

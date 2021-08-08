@@ -13,6 +13,7 @@ import FavouritePage from "../pages/movie/favouritePage";
 import TvShows from "../pages/tv/tvShows";
 import TvDetailed from "../pages/tv/tvDetail";
 import Profile from "../pages/profile";
+import ScrollToTop  from "../scrollToTop"
 
 import Home from "../pages/Home"
 
@@ -24,6 +25,7 @@ function App() {
       <NavBar />
       <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}>
         <Router history={history} >
+          <ScrollToTop>
           <Switch>
             <Route path="/movies" exact component={Auth(LandingPage, null)} />
             <Route path="/" exact component={Auth(Home, null)} />
@@ -35,6 +37,7 @@ function App() {
             <Route path="/tvShows/:showId" exact component={Auth(TvDetailed, null)} />
             <Route path="/profile" exact component={Auth(Profile, true)} />
           </Switch>
+          </ScrollToTop>
         </Router>
         {loading && <Spin spinning={true} size="large" />}
       </div>
