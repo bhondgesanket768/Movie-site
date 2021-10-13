@@ -208,6 +208,16 @@ function LandingPage() {
                 <div>
                     <CarouselComponent data={upcoming} />
                 </div>
+                <div style={{ display: "inline" }}>
+                    <div style={{ justifyContent: "space-around", display: "flex" }}>
+                        <iframe style={{ width: "120px", height: "240px" }} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=jonty06-21&marketplace=amazon&amp;region=IN&placement=B006QRQRLC&asins=B006QRQRLC&linkId=0900f84d325ae0182d44cd86f42ce674&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe>
+                        <iframe style={{ width: "120px", height: "240px" }} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=jonty06-21&marketplace=amazon&amp;region=IN&placement=B09CV4YHTK&asins=B09CV4YHTK&linkId=0808cbf690e4b77c7e33254d1ccb296a&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe>
+                        <iframe style={{ width: "120px", height: "240px" }} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=jonty06-21&language=en_IN&marketplace=amazon&region=IN&placement=B0168AZH4E&asins=B0168AZH4E&linkId=e45b4505fe5c6da5c3e1166da1eab6a0&show_border=true&link_opens_in_new_window=true"></iframe>
+                        <iframe style={{ width: "120px", height: "240px" }} marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=jonty06-21&language=en_IN&marketplace=amazon&region=IN&placement=B00XCD59YE&asins=B00XCD59YE&linkId=f87ff89cd04ef56a6a2c0079df3de6dd&show_border=true&link_opens_in_new_window=true"></iframe>
+                    </div>
+                </div>
             </div>
             <div style={{ paddingTop: 100 }}>
                 <Footer />

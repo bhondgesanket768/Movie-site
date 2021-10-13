@@ -30,6 +30,10 @@ function LeftMenu(props) {
     history.push("/tvShows");
   }
 
+  const handleNews = () =>{
+    history.push("/news")
+  }
+
   return (
     <Menu mode={props.mode}>
       <Menu.Item key="home" onClick={homeClick}>
@@ -44,6 +48,7 @@ function LeftMenu(props) {
       <SubMenu title={<span>More</span>} >
         <MenuItemGroup title="Others">
           <Menu.Item key="favourite" onClick={handleClick}>Favoutite List</Menu.Item>
+          <Menu.Item key="news" onClick={handleNews} >News</Menu.Item>
         </MenuItemGroup>
       </SubMenu>
     </Menu>

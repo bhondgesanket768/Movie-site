@@ -13,7 +13,8 @@ import FavouritePage from "../pages/movie/favouritePage";
 import TvShows from "../pages/tv/tvShows";
 import TvDetailed from "../pages/tv/tvDetail";
 import Profile from "../pages/profile";
-import ScrollToTop  from "../scrollToTop"
+import News from "../pages/News"
+import ScrollToTop from "../scrollToTop"
 
 import Home from "../pages/Home"
 
@@ -26,17 +27,18 @@ function App() {
       <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}>
         <Router history={history} >
           <ScrollToTop>
-          <Switch>
-            <Route path="/movies" exact component={Auth(LandingPage, null)} />
-            <Route path="/" exact component={Auth(Home, null)} />
-            <Route path="/register" exact component={Auth(RegisterPage, false)} />
-            <Route path="/login" exact component={Auth(Login, false)} />
-            <Route path="/movie/:movieId" exact component={Auth(MovieDetail, null)} />
-            <Route path="/favourite" exact component={Auth(FavouritePage, null)} />
-            <Route path="/tvShows" exact component={Auth(TvShows, null)} />
-            <Route path="/tvShows/:showId" exact component={Auth(TvDetailed, null)} />
-            <Route path="/profile" exact component={Auth(Profile, true)} />
-          </Switch>
+            <Switch>
+              <Route path="/movies" exact component={Auth(LandingPage, null)} />
+              <Route path="/" exact component={Auth(Home, null)} />
+              <Route path="/register" exact component={Auth(RegisterPage, false)} />
+              <Route path="/login" exact component={Auth(Login, false)} />
+              <Route path="/movie/:movieId" exact component={Auth(MovieDetail, null)} />
+              <Route path="/favourite" exact component={Auth(FavouritePage, null)} />
+              <Route path="/tvShows" exact component={Auth(TvShows, null)} />
+              <Route path="/tvShows/:showId" exact component={Auth(TvDetailed, null)} />
+              <Route path="/profile" exact component={Auth(Profile, true)} />
+              <Route path="/news" exact component={Auth(News, null)} />
+            </Switch>
           </ScrollToTop>
         </Router>
         {loading && <Spin spinning={true} size="large" />}
